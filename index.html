@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Adega Viva — comunidade de quem vive de vinho</title>
+  <meta name="description" content="A comunidade de vinho que não para no evento. Enquetes ao vivo, achados, perguntas e recomendações de quem bebe, de verdade, toda semana.">
+  <link rel="canonical" href="https://adegaviva.com.br/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#17100F">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adega Viva — comunidade de quem vive de vinho">
+  <meta property="og:description" content="Enquetes ao vivo, achados, perguntas e recomendações de vinho, toda semana.">
+  <meta property="og:image" content="https://adegaviva.com.br/assets/images/og-cover.jpg">
+  <meta property="og:url" content="https://adegaviva.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Adega Viva">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adega Viva — comunidade de quem vive de vinho">
+  <meta name="twitter:description" content="Enquetes ao vivo, achados e recomendações de vinho, toda semana.">
+  <meta name="twitter:image" content="https://adegaviva.com.br/assets/images/og-cover.jpg">
+
+  <!-- Performance: fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Adega Viva",
+    "url": "https://adegaviva.com.br/",
+    "description": "Comunidade contínua de vinho: enquetes ao vivo, achados e recomendações entre eventos.",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#topo">
+        <span class="brand-mark" aria-hidden="true">AV</span>
+        Adega Viva
+      </a>
+      <ul class="nav-links">
+        <li><a href="#adega-ao-vivo">Adega ao vivo</a></li>
+        <li><a href="#achados">Achados</a></li>
+        <li><a href="#perguntas">Perguntas</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="hero" id="topo">
+      <p class="eyebrow"><span class="vintage" id="vintage-tag">Safra 2026</span> · comunidade contínua</p>
+      <h1>O vinho não acaba quando o evento acaba.</h1>
+      <p class="hero-lead">
+        Aqui a conversa continua todo dia: o que abrir hoje, o que vale o preço,
+        o achado da semana. Sem evento, sem festival — só gente que bebe vinho
+        e quer trocar ideia com quem entende.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#adega-ao-vivo">Ver o que rola agora</a>
+        <a class="btn btn-ghost" href="#perguntas">Fazer uma pergunta</a>
+      </div>
+    </section>
+
+    <section class="rack" id="adega-ao-vivo" aria-labelledby="rack-title">
+      <div class="rack-heading">
+        <h2 id="rack-title">Adega ao vivo</h2>
+        <p>O que a comunidade está votando e comentando agora, atualizado em tempo real.</p>
+      </div>
+
+      <div class="poll-card" id="enquete-atual" aria-live="polite">
+        <p class="poll-question" id="poll-question">Qual você abre num jantar de sexta?</p>
+        <ul class="poll-options" id="poll-options">
+          <li class="skeleton">carregando enquete…</li>
+        </ul>
+      </div>
+
+      <ul class="bottle-shelf" id="live-feed" aria-label="Atividade recente da comunidade">
+        <li class="skeleton">carregando atividade…</li>
+      </ul>
+    </section>
+
+    <section class="finds" id="achados" aria-labelledby="finds-title">
+      <div class="rack-heading">
+        <h2 id="finds-title">Achados da semana</h2>
+        <p>Indicações reais de quem bebeu, com preço e onde encontrar.</p>
+      </div>
+
+      <div class="finds-grid" id="finds-grid">
+        <article class="find-card">
+          <p class="find-label">Tinto · Vale dos Vinhedos</p>
+          <h3>Um corte que surpreendeu pelo preço</h3>
+          <p>Encontrado por um membro da comunidade em uma vinícola pequena — abaixo de R$60 e bem acima da média da faixa.</p>
+          <p class="find-meta">postado por <strong>@camila.vinho</strong> · há 2 dias</p>
+        </article>
+        <article class="find-card">
+          <p class="find-label">Espumante · Serra Gaúcha</p>
+          <h3>Alternativa ao champanhe pro fim de ano</h3>
+          <p>Método tradicional, boa acidez, e disponível em mercado de bairro sem precisar encomendar.</p>
+          <p class="find-meta">postado por <strong>@thiago_taça</strong> · há 5 dias</p>
+        </article>
+        <article class="find-card">
+          <p class="find-label">Branco · Santa Catarina</p>
+          <h3>Harmoniza melhor com comida de rua que imaginei</h3>
+          <p>Testado com pastel de feira por um membro — combinação que ninguém esperava funcionar tão bem.</p>
+          <p class="find-meta">postado por <strong>@renata.uva</strong> · há 1 semana</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="asks" id="perguntas" aria-labelledby="asks-title">
+      <div class="rack-heading">
+        <h2 id="asks-title">Perguntas da comunidade</h2>
+        <p>Toda pergunta aqui é um sinal do que as pessoas realmente querem saber.</p>
+      </div>
+
+      <form class="ask-form" id="ask-form">
+        <label for="ask-input">Sua pergunta para a comunidade</label>
+        <textarea id="ask-input" name="pergunta" rows="3" placeholder="Ex: qual vinho vai bem com churrasco de meio de semana, sem gastar muito?" required></textarea>
+        <button class="btn btn-primary" type="submit">Perguntar</button>
+        <p class="form-hint" id="ask-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="about" id="sobre" aria-labelledby="about-title">
+      <h2 id="about-title">O que é a Adega Viva</h2>
+      <p>
+        Uma comunidade construída para durar entre um evento e outro. Durante festivais e
+        degustações, ela vira palco de enquetes ao vivo e desafios de patrocinadores;
+        no dia a dia, continua viva com achados, dúvidas e recomendações reais de quem bebe vinho.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="ano-atual">2026</span> Adega Viva. Feita para durar além do evento.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
