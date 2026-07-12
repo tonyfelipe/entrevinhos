@@ -1,0 +1,343 @@
+/* ============================================
+   Adega Viva — tokens
+   ============================================ */
+:root {
+  /* cores — cave de vinho ao entardecer */
+  --cellar-black: #17100F;
+  --cellar-black-soft: #221715;
+  --bordeaux: #6E1423;
+  --garnet: #B23A2E;
+  --gold-leaf: #C9A227;
+  --parchment: #EDE3D0;
+  --parchment-dim: #C9BFAC;
+  --sage: #7C8B6F;
+
+  /* tipografia */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* escala */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 3rem;
+  --space-5: 5rem;
+
+  --radius: 4px;
+  --rule: 1px solid rgba(201, 162, 39, 0.35);
+}
+
+/* ============================================
+   Reset mínimo
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cellar-black);
+  color: var(--parchment);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ============================================
+   Acessibilidade
+   ============================================ */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--gold-leaf);
+  color: var(--cellar-black);
+  padding: var(--space-1) var(--space-2);
+  z-index: 100;
+}
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+}
+:focus-visible {
+  outline: 2px solid var(--gold-leaf);
+  outline-offset: 3px;
+}
+
+/* ============================================
+   Cabeçalho
+   ============================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(23, 16, 15, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: var(--rule);
+}
+.nav {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--gold-leaf);
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--gold-leaf);
+}
+.nav-links {
+  display: none;
+  gap: var(--space-3);
+  font-size: 0.9rem;
+}
+.nav-links a { text-decoration: none; color: var(--parchment-dim); }
+.nav-links a:hover { color: var(--gold-leaf); }
+@media (min-width: 640px) {
+  .nav-links { display: flex; }
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.hero {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-2) var(--space-4);
+  text-align: center;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+  margin: 0 0 var(--space-2);
+}
+.vintage {
+  color: var(--gold-leaf);
+  border: 1px solid rgba(201, 162, 39, 0.5);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-right: 0.4rem;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw + 1rem, 3.25rem);
+  line-height: 1.1;
+  margin: 0 0 var(--space-2);
+}
+.hero-lead {
+  color: var(--parchment-dim);
+  font-size: 1.05rem;
+  max-width: 34rem;
+  margin: 0 auto var(--space-3);
+}
+.hero-actions {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Botões
+   ============================================ */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--bordeaux);
+  color: var(--parchment);
+}
+.btn-primary:hover { background: var(--garnet); }
+.btn-ghost {
+  border-color: rgba(237, 227, 208, 0.35);
+  color: var(--parchment);
+  background: transparent;
+}
+.btn-ghost:hover { border-color: var(--gold-leaf); color: var(--gold-leaf); }
+
+/* ============================================
+   Seções gerais
+   ============================================ */
+section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-2);
+  border-top: var(--rule);
+}
+.rack-heading h2,
+.about h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+.rack-heading p { color: var(--parchment-dim); margin: 0 0 var(--space-3); }
+
+/* ============================================
+   Enquete ao vivo
+   ============================================ */
+.poll-card {
+  background: var(--cellar-black-soft);
+  border: var(--rule);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.poll-question {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0 0 var(--space-2);
+}
+.poll-options { display: flex; flex-direction: column; gap: 0.6rem; }
+.poll-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(237, 227, 208, 0.04);
+  border: 1px solid rgba(237, 227, 208, 0.12);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.poll-option:hover { border-color: var(--gold-leaf); }
+.poll-option .count {
+  font-family: var(--font-mono);
+  color: var(--gold-leaf);
+  font-size: 0.8rem;
+}
+.skeleton { color: var(--parchment-dim); font-size: 0.85rem; font-style: italic; }
+
+/* ============================================
+   Prateleira de atividade (bottle shelf)
+   ============================================ */
+.bottle-shelf {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-1);
+  scroll-snap-type: x proximity;
+}
+.bottle-shelf li {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  min-width: 14rem;
+  background: var(--cellar-black-soft);
+  border: var(--rule);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+.bottle-shelf li:nth-child(odd) { transform: translateY(-4px); }
+.activity-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================
+   Achados
+   ============================================ */
+.finds-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .finds-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.find-card {
+  border: var(--rule);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  background: var(--cellar-black-soft);
+}
+.find-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--gold-leaf);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 var(--space-1);
+}
+.find-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0 0 var(--space-1);
+}
+.find-card p { color: var(--parchment-dim); font-size: 0.92rem; }
+.find-meta { font-size: 0.8rem; margin-top: var(--space-2); }
+.find-meta strong { color: var(--parchment); }
+
+/* ============================================
+   Perguntas / formulário
+   ============================================ */
+.ask-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 36rem;
+}
+.ask-form label { font-size: 0.9rem; color: var(--parchment-dim); }
+.ask-form textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--cellar-black-soft);
+  border: 1px solid rgba(237, 227, 208, 0.2);
+  border-radius: var(--radius);
+  color: var(--parchment);
+  padding: var(--space-2);
+  resize: vertical;
+}
+.ask-form textarea:focus { border-color: var(--gold-leaf); }
+.form-hint { font-size: 0.85rem; color: var(--sage); min-height: 1.2em; }
+
+/* ============================================
+   Sobre / rodapé
+   ============================================ */
+.about p { color: var(--parchment-dim); max-width: 40rem; }
+.site-footer {
+  text-align: center;
+  padding: var(--space-3) var(--space-2) var(--space-4);
+  color: var(--parchment-dim);
+  font-size: 0.85rem;
+}
