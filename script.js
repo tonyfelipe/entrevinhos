@@ -1,5 +1,5 @@
 // ============================================
-// Adega Viva — script.js
+// Entre Vinhos — script.js
 // Camada de interação em tempo real via Supabase.
 //
 // 1. Crie um projeto grátis em https://supabase.com
