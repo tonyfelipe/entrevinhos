@@ -1,0 +1,13 @@
+{
+  "name": "Adega Viva",
+  "short_name": "Adega Viva",
+  "description": "Comunidade contínua de vinho: enquetes ao vivo, achados e recomendações.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#17100F",
+  "theme_color": "#17100F",
+  "icons": [
+    { "src": "assets/icons/android-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/android-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
